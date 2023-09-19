@@ -3,7 +3,9 @@ import numpy as np
 import pandas as pd
 from .due import due, Doi
 
-__all__ = ["Model", "Fit", "opt_err_func", "transform_data", "cumgauss"]
+__all__ = [
+    "simple_function"
+]
 
 
 # Use duecredit (duecredit.org) to provide a citation to relevant work to
