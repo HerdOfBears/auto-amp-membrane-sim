@@ -4,7 +4,8 @@ import pandas as pd
 from .due import due, Doi
 
 __all__ = [
-    "simple_function"
+    "simple_function_add",
+    "simple_function_mult"
 ]
 
 
@@ -17,5 +18,8 @@ due.cite(Doi(""),
          path='autoams')
 
 
-def simple_function(x, y):
+def simple_function_add(x, y):
     return x+y
+
+def simple_function_mult(x, y):
+    return x*y
