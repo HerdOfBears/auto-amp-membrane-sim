@@ -8,6 +8,10 @@ import autoams as amps
 data_path = op.join(amps.__path__[0], 'data')
 
 
-def test_simple_function():
-    assert amps.simple_function(1, 2) == 3
-    assert amps.simple_function("a", "b") == "ab"
+def test_simple_function_add():
+    assert amps.simple_function_add(1, 2) == 3
+    assert amps.simple_function_add("a", "b") == "ab"
+
+def test_simple_function_new_branch():
+    assert amps.simple_function_new_branch(1, 2) == 1
+    assert amps.simple_function_new_branch(2,2)  == 4

@@ -5,7 +5,8 @@ from .due import due, Doi
 
 __all__ = [
     "simple_function_add",
-    "simple_function_mult"
+    "simple_function_mult",
+    "simple_function_new_branch"
 ]
 
 
@@ -20,6 +21,9 @@ due.cite(Doi(""),
 
 def simple_function_add(x, y):
     return x+y
+
+def simple_function_new_branch(x, y):
+    return x**y
 
 def simple_function_mult(x, y):
     return x*y
