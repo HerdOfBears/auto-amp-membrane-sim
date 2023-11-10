@@ -1,0 +1,5 @@
+-f: "GL13Kcoil.pdb" # input peptide file
+-ff: "martini22p"   # force field
+-ss: ["SSEEEEEEEEESS", "SSEEEEEECCESS"] # secondary structures
+-out_dir: "autoams/tests/output/" # where to write output files
+-in_dir: "autoams/tests/data/"    # where to look for pbd|gro file to coarse-grain
