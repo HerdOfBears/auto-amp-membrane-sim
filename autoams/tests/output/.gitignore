@@ -1,0 +1,7 @@
+# why this is here: 
+# we want to ensure there is an output directory for tests to output to.
+# if this directory was not present, then functions told to output to an output directory would fail.
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
