@@ -4801,9 +4801,9 @@ Martini system from %s
     options['ForceField'].messages()
 
     # The following lines are always printed (if no errors occur).
-    print("\n\tThere you are. One MARTINI. Shaken, not stirred.\n")
-    Q = martiniq.pop(random.randint(0, len(martiniq)-1))
-    print("\n", Q[1], "\n%80s" % ("--"+Q[0]), "\n")
+    # print("\n\tThere you are. One MARTINI. Shaken, not stirred.\n")
+    # Q = martiniq.pop(random.randint(0, len(martiniq)-1))
+    # print("\n", Q[1], "\n%80s" % ("--"+Q[0]), "\n")
 if __name__ == '__main__':
     import sys, logging
     args = sys.argv[1:]
