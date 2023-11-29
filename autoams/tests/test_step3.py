@@ -8,9 +8,9 @@ import autoams as amps
 data_path = op.join(amps.__path__[0], 'data')
 
 
-def test_PeptideGrid(pdb = 'testpdb.pdb'):
+def test_peptide_grid(pdb = 'testpdb.pdb'):
     '''Test peptide grid object'''
     model = amps.PeptideGrid(pdb)    #create the object that will generate the grid of peptides
-    model.GenerateGrid()        #generate the grid with default settings
-    model.SaveGrid()            #save the 3d coordinates to a pdb file renamed to all_molecules_combined.pdb
+    model.generate_grid()        #generate the grid with default settings
+    model.save_grid()            #save the 3d coordinates to a pdb file renamed to all_molecules_combined.pdb
     assert op.isfile('all_molecules_combined.pdb')

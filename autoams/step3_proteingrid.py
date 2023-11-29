@@ -5,16 +5,16 @@ from Bio.PDB import PDBParser, PDBIO, Model, Structure
 __all__ = ["PeptideGrid"]
 
 class PeptideGrid():
-
-    def __init__(self, pdb_file, distance=0, peptides=16, minim_sep=20):
+    '''docstring!'''
+    def __init__(self, pdb_file, distance=0, num_peptides=16, minim_sep=20):
         self.molecule = mda.Universe(str(pdb_file))
         self.normal_vector = np.array([0.0, 0.0, 1.0])
         self.distance_from_origin = distance
-        self.replicates = peptides
+        self.replicates = num_peptides
         self.minimum_separation = minim_sep
         self.molecules_in_plane = []
 
-    def GenerateGrid(self):
+    def generate_grid(self):
         ''' generates the grid of peptides in the horizontal axis '''
 
         for i in range(self.replicates):
@@ -47,7 +47,7 @@ class PeptideGrid():
                     self.molecules_in_plane.append(new_molecule)
                     valid_position = True
 
-    def SaveGrid(self):
+    def save_grid(self):
         '''Saves the grid of molecules in the horizontal plane'''
         # Create a combined Universe
         combined_universe = mda.Merge(*[mol.atoms for mol in self.molecules_in_plane])
